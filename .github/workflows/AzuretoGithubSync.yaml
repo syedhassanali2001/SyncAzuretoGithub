@@ -10,4 +10,5 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v2
       - run: |
+          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
           ./SyncAzuretoGithub.ps1 -GithubDestinationPAT ${{secrets.GITHUBDESTINATIONPAT}} -AzureSourcePAT ${{secrets.AZURESOURCEPAT}}
