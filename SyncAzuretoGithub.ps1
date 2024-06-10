@@ -14,7 +14,7 @@ Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - '
 $AzureRepoName = "Aladdin-Karobaar-Web-Portal"
 $AzureCloneURL = "dev.azure.com/aladdininformatics/Aladdin-Karobaar-Web-Portal/_git/Aladdin-Karobaar-Web-Portal"
 $GithubCloneURL = "github.com/syedhassanali2001/Aladdin-Karobaar-Web-App.git"
-$stageDir = pwd | Split-Path
+$stageDir = Get-Location | Split-Path
 Write-Host "Stage Dir is : $stageDir"
 $githubDir = $stageDir + "\gitHub"
 Write-Host "Github Dir is : $githubDir"
